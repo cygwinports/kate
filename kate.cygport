@@ -2,7 +2,7 @@ inherit kf5
 
 NAME="kate"
 VERSION=15.04.3
-RELEASE=1
+RELEASE=2
 CATEGORY="Editors"
 SUMMARY="KDE advanced text editor"
 DESCRIPTION="Part of the KDE base applications suite"
