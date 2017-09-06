@@ -2,7 +2,7 @@ inherit kf5
 
 NAME="kate"
 VERSION=17.04.3
-RELEASE=1
+RELEASE=2
 CATEGORY="Editors"
 SUMMARY="KDE advanced text editor"
 DESCRIPTION="Part of the KDE base applications suite"
@@ -10,21 +10,25 @@ DESCRIPTION="Part of the KDE base applications suite"
 PKG_NAMES="kate kwrite"
 kate_OBSOLETES="kate-devel kate-pate"
 kate_CONTENTS="
+	--exclude=kwrite.mo
 	etc/postinstall/
 	usr/bin/kate.exe
 	${QT5_PLUGINSDIR#/}/ktexteditor/
 	${QT5_PLUGINSDIR#/}/plasma/dataengine/plasma_engine_katesessions.dll
 	usr/share/applications/org.kde.kate.desktop
-	usr/share/doc/HTML/en/kate/
-	usr/share/doc/HTML/en/katepart/
+	usr/share/doc/HTML/*/kate/
+	usr/share/doc/HTML/*/katepart/
 	usr/share/doc/kate/
 	usr/share/icons/hicolor/*/apps/kate.*
 	usr/share/kateproject/
 	usr/share/katexmltools/
 	usr/share/kservices5/plasma-applet-org.kde.plasma.katesessions.desktop
 	usr/share/kservices5/plasma-dataengine-katesessions.desktop
+	usr/share/locale/
 	usr/share/man/man1/kate.1*
+	usr/share/man/*/man1/kate.1*
 	usr/share/metainfo/org.kde.kate.appdata.xml
+	usr/share/metainfo/org.kde.plasma.katesessions.appdata.xml
 	usr/share/plasma/plasmoids/org.kde.plasma.katesessions/
 	usr/share/plasma/services/org.kde.plasma.katesessions.operations
 "
@@ -32,7 +36,8 @@ kwrite_CONTENTS="
 	etc/postinstall/
 	usr/bin/kwrite.exe
 	usr/share/applications/org.kde.kwrite.desktop
-	usr/share/doc/HTML/en/kwrite/
+	usr/share/doc/HTML/*/kwrite/
 	usr/share/icons/hicolor/*/apps/kwrite.*
+	usr/share/locale/*/LC_MESSAGES/kwrite.mo
 	usr/share/metainfo/org.kde.kwrite.appdata.xml
 "
